@@ -7,15 +7,15 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Đăng ký các service vào container (chạy TRƯỚC khi ứng dụng khởi động).
      */
     public function register(): void
     {
-        //
+        
     }
 
     /**
-     * Bootstrap any application services.
+     * Thực hiện các thiết lập khi ứng dụng khởi động.
      */
     public function boot(): void
     {
