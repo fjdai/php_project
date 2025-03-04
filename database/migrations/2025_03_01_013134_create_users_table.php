@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('password_hash');
             $table->string('phone_number')->nullable();
             $table->date('date_of_birth')->nullable();
-
+            $table->string('avatar')->nullable();
+            
             $table->timestamps();
         });
     }
