@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('id')->primary(); 
             $table->decimal('amount', 10, 2);
-            $table->string('status'); // pending, failed, completed.
-            $table->string('type'); // momo, zalopay, vnpay.
+            $table->enum('status', ['pending', 'failed', 'completed'])->index()->comment('Trạng thái giao dịch');
+            $table->enum('type', ['momo', 'zalopay', 'vnpay'])->index()->comment('Phương thức thanh toán');
 
             $table->timestamp('transaction_date')->useCurrent();
 
