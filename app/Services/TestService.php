@@ -2,9 +2,8 @@
 
 namespace App\Services;
 
-// use app\Repositories\TestRepository;
+// use App\Repositories\TestRepository;
 use Illuminate\Database\Eloquent\Collection;
-use app\Models\Test;
 
 class TestService
 {
@@ -31,4 +30,3 @@ class TestService
         return $this->testRepository->create($data);
     }
 }
-?>
