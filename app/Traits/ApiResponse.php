@@ -10,7 +10,7 @@ trait ApiResponse
             'status' => 'success',
             'message' => $message,
             'data' => $data,
-            'author' => 'Phan Gia Đại'
+            'author' => 'Nhóm X'
         ], $status);
     }
 
@@ -19,7 +19,7 @@ trait ApiResponse
         return response()->json([
             'status' => 'error',
             'message' => $message,
-            'author' => 'Phan Gia Đại'
+            'author' => 'Nhóm X'
         ], $status);
     }
 }

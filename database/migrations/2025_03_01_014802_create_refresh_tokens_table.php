@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('refresh_tokens', function (Blueprint $table) {
-            $table->uuid('id')->primary(); 
-            $table->string('token')->unique();
-            $table->timestamp('expires_at');
-           
+            $table->id();
+            $table->string('token', 64)->unique();
+            $table->timestamp('expires_at')->nullable();
+
             $table->timestamps();
         });
     }

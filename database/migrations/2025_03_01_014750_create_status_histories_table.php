@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('status_histories', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id()->index();
             $table->enum('status', [
                 'pending_doctor', 'approved_doctor', 'rejected_doctor',
                 'pending_verification', 'pending_supporter', 'approved_supporter',

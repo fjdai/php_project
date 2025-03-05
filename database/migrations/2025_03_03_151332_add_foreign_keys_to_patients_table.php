@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('patients', function (Blueprint $table) {
-            $table->uuid('schedule_id')->nullable();
-            $table->foreign('schedule_id')->references('id')->on('schedules')->onDelete('set null');
+            $table->foreignId('schedule_id')->nullable()->constrained('schedules')->onDelete('set null');
         });
     }
 

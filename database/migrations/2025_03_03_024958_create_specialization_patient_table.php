@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('specialization_user', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id()->index();
 
             $table->timestamps();
 

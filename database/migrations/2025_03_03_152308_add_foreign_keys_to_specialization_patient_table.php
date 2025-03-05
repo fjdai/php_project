@@ -16,8 +16,7 @@ return new class extends Migration
             $table->uuid('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->uuid('specialization_id');
-            $table->foreign('specialization_id')->references('id')->on('specializations')->onDelete('cascade');
+            $table->foreignId('specialization_id')->constrained('specializations')->onDelete('cascade');
 
         });
     }
