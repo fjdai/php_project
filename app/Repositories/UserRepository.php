@@ -2,9 +2,17 @@
 
 namespace App\Repositories;
 
-use App\Repositories\UserRepositoryInterface;
+use App\Models\User;
 
 class UserRepository implements UserRepositoryInterface
 {
-    // Implement methods
+    public function create(array $data)
+    {
+        return User::create($data);
+    }
+
+    public function findByEmail(string $email)
+    {
+        return User::where('email', $email)->first();
+    }
 }
